@@ -67,15 +67,17 @@ def yellow_white_masks(self, img):
 
 > Since the pipeline depends on the correct color segmentation I'm using HLS color-space for detection of yellow and white regions because standard RGB palette is not suitable for this. I tried HSV as well; however, HLS gives me the best result.
 
-> Here is a good explanation of [HSV and HLS color-spaces](https://en.wikipedia.org/wiki/HSL_and_HSV) <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hsl-hsv_models.svg" alt="WikiHSVandHLS" style="width: 300px;"/>
+> Here is a good explanation of [HSV and HLS color-spaces](https://en.wikipedia.org/wiki/HSL_and_HSV) 
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Hsl-hsv_models.svg" width="300px">
 
 #### After applying mask filter I've got this (original image, HLS convertion, masked image):
 
 <table>
 <tr>
-<td><img src="./test_images/solidYellowLightChallenge.jpg" alt="original"/></td>
-<td><img src="./test_images_output/hls solidYellowLightChallenge.jpg" alt="HLS"/></td> 
-<td><img src="./test_images_output/masked solidYellowLightChallenge.jpg" alt="masked"/></td>
+<td><img src="./test_images/solidYellowLightChallenge.jpg" width="350px"/></td>
+<td><img src="./test_images_output/hls solidYellowLightChallenge.jpg" width="350px"/></td> 
+<td><img src="./test_images_output/masked solidYellowLightChallenge.jpg" width="350px"/></td>
 </tr>
 </table>
 
@@ -106,8 +108,8 @@ self.kernel_size = 5
 
 <table>
 <tr>
-<td><img src="./test_images_output/gray solidYellowLightChallenge.jpg" alt="gray" style="width: 350px;"/></td> 
-<td><img src="./test_images_output/blur solidYellowLightChallenge.jpg" alt="blur" style="width: 350px;"/></td>
+<td><img src="./test_images_output/gray solidYellowLightChallenge.jpg" width="350px"/></td> 
+<td><img src="./test_images_output/blur solidYellowLightChallenge.jpg" width="350px"/></td>
 </tr>
 </table>
 
@@ -133,7 +135,7 @@ def canny(self, img, low_threshold, high_threshold):
 
 #### Output:
 
-<img src="./test_images_output/edge solidYellowLightChallenge.jpg" alt="edge" style="width: 350px;"/>
+<img src="./test_images_output/edge solidYellowLightChallenge.jpg" width="350px"/>
 
 
 ### 4 - Region of interest and hough transform:
@@ -172,7 +174,7 @@ def region_of_interest(self, img):
 
 #### Output:
 
-<img src="./test_images_output/roi solidYellowLightChallenge.jpg" alt="roi" style="width: 350px;"/>
+<img src="./test_images_output/roi solidYellowLightChallenge.jpg" width="350px"/>
 
 > Next step: [Hough transform](https://en.wikipedia.org/wiki/Hough_transform) to detect lines. When we have edges from canny detection we can connect them using lines.
 
@@ -280,8 +282,8 @@ def line_endpoints(self, shape, slope_intercept):
 
 <table>
 <tr>
-<td><img src="./test_images_output/lines solidYellowLightChallenge.jpg" alt="lines" style="width: 350px;"/></td> 
-<td><img src="./test_images_output/two_lines solidYellowLightChallenge.jpg" alt="two lines" style="width: 350px;"/></td>
+<td><img src="./test_images_output/lines solidYellowLightChallenge.jpg" width="350px"/></td> 
+<td><img src="./test_images_output/two_lines solidYellowLightChallenge.jpg" width="350px"/></td>
 </tr>
 </table>
 
@@ -329,7 +331,7 @@ def weighted_img(self, img, initial_img, α=0.8, β=1., λ=0.):
 
 ---
 
-> This pipeline shows good results on test videos as well as on the challenge one.
+> This pipeline shows good results on two test videos as well as on the challenge one.
 
 
 ### 2. Identify potential shortcomings with your current pipeline
@@ -345,9 +347,3 @@ Another shortcoming is that this pipeline very likely will fail on videos with c
 A possible improvement would be to take in account curved lanes and get rid of hardcoded region of interest.
 
 Another potential improvement could be to adapt this pipeline to different types of roads of different countries.
-
-
-
-```python
-
-```
