@@ -331,7 +331,7 @@ def weighted_img(self, img, initial_img, α=0.8, β=1., λ=0.):
 
 ---
 
-> This pipeline shows good results on two test videos as well as on the challenge one.
+> This pipeline shows good results on [two test videos as well as on the challenge one](https://github.com/feklistoff/udacity-carnd-project1/tree/master/test_videos_output).
 
 
 ### 2. Identify potential shortcomings with your current pipeline
