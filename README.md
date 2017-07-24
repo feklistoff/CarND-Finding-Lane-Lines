@@ -17,7 +17,7 @@ What's inside:
 
 * Code for the pipeline with ALL the steps of building process in the [Project 1 notebook](https://github.com/feklistoff/udacity-carnd-project1/blob/master/P1.ipynb)
 
-* Shorter version (quintessence) [Project 1 short](https://github.com/feklistoff/udacity-carnd-project1/blob/master/P1_short.ipynb)
+* Shorter version (final result) [Project 1 short](https://github.com/feklistoff/udacity-carnd-project1/blob/master/P1_short.ipynb)
 
 * You can download HTML versions of the notebooks as well
 
